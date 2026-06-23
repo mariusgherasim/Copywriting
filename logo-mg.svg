@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 70" width="320" height="70">
+
+  <!-- M letter -->
+  <path d="M8 12 L8 58 L18 58 L18 28 L32 50 L46 28 L46 58 L56 58 L56 12 L44 12 L32 34 L20 12 Z" fill="#0B1F4A"/>
+
+  <!-- G letter (overlapping M slightly on right side of M) -->
+  <!-- Outer arc -->
+  <path d="
+    M 95 35
+    A 28 28 0 1 0 67 63
+    L 67 50
+    A 15 15 0 1 1 82 20
+    Z
+  " fill="#0B1F4A"/>
+  <!-- Horizontal bar of G -->
+  <rect x="82" y="35" width="13" height="10" fill="#0B1F4A"/>
+  <!-- Gold corner accent bottom-right of G -->
+  <polygon points="95,45 95,63 77,63" fill="#C89B3C"/>
+
+  <!-- MARIUS GHERASIM text -->
+  <text x="115" y="32" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="700" fill="#0B1F4A" letter-spacing="2">MARIUS GHERASIM</text>
+
+  <!-- COPYWRITER & DIGITAL MARKETING SPECIALIST text -->
+  <text x="115" y="52" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#C89B3C" letter-spacing="1.5">COPYWRITER &amp; DIGITAL MARKETING SPECIALIST</text>
+
+</svg>
