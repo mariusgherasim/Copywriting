@@ -77,10 +77,10 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 68px;
+  height: 76px;
   gap: 24px;
 }
-.logo-img { height: 42px; width: auto; max-width: 260px; }
+.logo-img { height: 64px; width: auto; max-width: 420px; }
 nav { display: flex; gap: 32px; }
 nav a {
   font-size: 0.95rem;
@@ -482,7 +482,14 @@ footer {
   flex-wrap: wrap;
   gap: 24px;
 }
-.logo-img-white { filter: brightness(0) invert(1); }
+.logo-img-white { 
+  height: 48px; 
+  width: auto; 
+  max-width: 340px;
+  background: white;
+  border-radius: 6px;
+  padding: 4px 8px;
+}
 .footer-copy { font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-top: 8px; }
 .footer-social-label {
   font-size: 0.72rem;
