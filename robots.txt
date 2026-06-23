@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://copywriting.gherasimmarius.com/sitemap.xml
