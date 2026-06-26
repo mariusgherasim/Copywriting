@@ -100,7 +100,7 @@ gtag('config', 'G-HS59YL4Y3D');
       <a href="#contact">Contact</a>
       <a href="#preturi">Prețuri</a>
     </nav>
-    <a class="btn btn-nav" href="#contact">Solicită o ofertă</a>
+    <a class="btn btn-nav" href="#contact" onclick="trackEvent('cta_offer',{ location:'header'})">
     <button class="hamburger" id="hamburger" aria-label="Meniu">&#9776;</button>
   </div>
   <div class="mobile-nav" id="mobileNav">
@@ -121,8 +121,8 @@ gtag('config', 'G-HS59YL4Y3D');
       <h1>Textele potrivite nu doar informează. Construiesc încredere, atrag atenția și determină oamenii să acționeze.</h1>
       <p class="hero-sub">Copywriting, Social Media, Facebook Ads și Marketing Digital pentru antreprenori și companii care vor să comunice mai clar și să obțină rezultate.</p>
       <div class="hero-ctas">
-        <a class="btn" href="#contact">Solicită o ofertă</a>
-        <a class="btn btn-outline" href="#servicii">Vezi serviciile</a>
+        <a class="btn" href="#contact" onclick="trackEvent('cta_offer',{location:'hero'})"> Solicită o ofertă </a>
+        <a class="btn btn-outline" href="#servicii" onclick="trackEvent('cta_services')">Vezi serviciile</a>
       </div>
     </div>
     <div class="hero-card">
@@ -498,10 +498,12 @@ gtag('config', 'G-HS59YL4Y3D');
 
         </table>
 
-        <a href="#contact" class="btn btn-full">
-          Solicită ofertă
-        </a>
+        <a href="#contact" class="btn btn-full" onclick="trackEvent('cta_offer',{ location:'pricing' })">
 
+          Solicită ofertă
+
+        </a>
+   
       </div>
 
       <!-- ADS -->
@@ -540,12 +542,12 @@ gtag('config', 'G-HS59YL4Y3D');
 
         </p>
 
-        <a href="#contact" class="btn btn-full">
+        <a href="#contact" class="btn btn-full" onclick="trackEvent('cta_offer',{ location:'pricing' })">
 
           Solicită ofertă
 
         </a>
-
+ 
       </div>
 
     </div>
@@ -607,7 +609,7 @@ gtag('config', 'G-HS59YL4Y3D');
       <p>Completează formularul și te voi contacta în cel mai scurt timp.</p>
     </div>
     <div class="contact-right">
-      <form action="https://api.web3forms.com/submit" method="POST">
+      <form action="https://api.web3forms.com/submit" onsubmit="trackEvent('generate_lead',{form:'contact'})" method="POST">
         <input type="hidden" name="access_key" value="ab2b21fd-f46a-4144-acc5-556fe06deaa8">
         <input type="hidden" name="redirect" value="https://copywriting.gherasimmarius.com/multumesc.html">
         <div class="form-row">
@@ -660,6 +662,23 @@ gtag('config', 'G-HS59YL4Y3D');
     </div>
   </div>
 </footer>
+
+<script>
+
+function trackEvent(eventName, params = {}){
+
+    if(typeof gtag === "function"){
+
+        gtag("event", eventName, params);
+
+        console.log("GA4:", eventName, params);
+
+    }
+
+}
+
+</script>
+
 
 <script>
 const hamburger = document.getElementById('hamburger');
