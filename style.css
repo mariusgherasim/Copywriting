@@ -346,6 +346,30 @@ nav a.active { border-bottom: 2px solid var(--gold); }
 .proiect-card strong { display: block; font-size: 0.88rem; color: var(--navy); margin-bottom: 6px; }
 .proiect-card p { font-size: 0.82rem; color: var(--text-light); line-height: 1.5; }
 
+/* =====================================
+   PORTOFOLIU - CARDURI CLICKABILE
+===================================== */
+
+.proiect-link {text-decoration: none; color: inherit; cursor: pointer; transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;}
+
+/* HOVER */
+
+.proiect-link:hover {transform: translateY(-5px); box-shadow: 0 14px 35px rgba(15, 43, 91, 0.14); border-color: #C89B3C;}
+
+/* TITLU */
+
+.proiect-link strong {transition: color 0.25s ease;}
+.proiect-link:hover strong { color: #C89B3C;}
+
+/* ICON */
+
+.proiect-link .proiect-icon { transition: transform 0.25s ease;}
+.proiect-link:hover .proiect-icon { transform: scale(1.08);}
+
+/* ACCESIBILITATE TASTATURĂ */
+
+.proiect-link:focus-visible { outline: 3px solid #C89B3C; outline-offset: 4px;}
+
 /* ===== CONTACT ===== */
 .contact-section { background: var(--bg-light); }
 .contact-inner {
