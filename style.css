@@ -369,6 +369,17 @@ nav a.active { border-bottom: 2px solid var(--gold); }
 /* ACCESIBILITATE TASTATURĂ */
 
 .proiect-link:focus-visible { outline: 3px solid #C89B3C; outline-offset: 4px;}
+.proiect-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--gold, #C89B3C);
+  background: rgba(200,155,60,0.1);
+  border-radius: 3px;
+  padding: 2px 7px;
+  margin: 4px 0 6px;
+  letter-spacing: 0.4px;
+}
 
 /* ===== CONTACT ===== */
 .contact-section { background: var(--bg-light); }
