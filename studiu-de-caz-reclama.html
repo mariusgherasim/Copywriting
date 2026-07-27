@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cum am transformat o reclamă fără rezultate în 6 comenzi — Marius Gherasim</title>
+<style>
+  :root {
+    --navy: #0B1F4A;
+    --navy-light: #14306E;
+    --gold: #C89B3C;
+    --gold-light: #E4C878;
+    --cream: #FAF9F6;
+    --gray: #5A5F6B;
+    --border: #E4E1D9;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: var(--navy);
+    background: #FFFFFF;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, .display {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  a { color: inherit; }
+
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    background: var(--navy);
+    color: #fff;
+    padding: 76px 0 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    right: -80px; top: -80px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,155,60,0.18), transparent 70%);
+  }
+  .eyebrow {
+    display: inline-block;
+    font-size: 12.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    border: 1px solid rgba(228,200,120,0.4);
+    padding: 5px 14px;
+    border-radius: 100px;
+    margin-bottom: 22px;
+  }
+  .hero h1 {
+    font-size: 40px;
+    line-height: 1.18;
+    color: #fff;
+    max-width: 680px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--gold-light);
+  }
+  .hero p.lede {
+    margin-top: 20px;
+    font-size: 17px;
+    color: #C7CEDE;
+    max-width: 560px;
+  }
+
+  .stat-row {
+    display: flex;
+    gap: 0;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+  .stat {
+    flex: 1;
+    padding: 22px 0 0;
+    border-right: 1px solid rgba(255,255,255,0.15);
+  }
+  .stat:last-child { border-right: none; }
+  .stat .num {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    color: var(--gold-light);
+    font-weight: 700;
+  }
+  .stat .lbl {
+    font-size: 12.5px;
+    color: #A9B2C6;
+    margin-top: 4px;
+  }
+
+  /* ---------- SECTIONS ---------- */
+  section { padding: 64px 0; }
+  section.alt { background: var(--cream); }
+
+  .section-label {
+    font-size: 12.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  h2 { font-size: 27px; margin-bottom: 8px; }
+  .section-intro {
+    color: var(--gray);
+    max-width: 620px;
+    margin-bottom: 36px;
+    font-size: 15.5px;
+  }
+
+  /* Before / After */
+  .compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+  .card {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .card-head {
+    padding: 14px 20px;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .card.before .card-head { background: #F4E9E5; color: #8A4A34; }
+  .card.after .card-head { background: #0B1F4A; color: var(--gold-light); }
+  .card-body { padding: 22px 20px; font-size: 14.5px; color: var(--navy); }
+  .card-body p { margin-bottom: 12px; }
+  .card-meta {
+    padding: 14px 20px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--gray);
+  }
+  .card.before .card-meta strong { color: #B5432A; }
+  .card.after .card-meta strong { color: var(--gold); }
+
+  /* What changed */
+  .changes { display: flex; flex-direction: column; gap: 18px; }
+  .change-item {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 18px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .change-item:last-child { border-bottom: none; }
+  .change-num {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    color: var(--gold);
+    font-weight: 700;
+  }
+  .change-item h3 { font-size: 16.5px; margin-bottom: 6px; }
+  .change-item p { color: var(--gray); font-size: 14.5px; }
+
+  /* CTA */
+  .cta {
+    background: var(--navy);
+    color: #fff;
+    border-radius: 6px;
+    padding: 44px 40px;
+    text-align: center;
+  }
+  .cta h2 { color: #fff; font-size: 24px; }
+  .cta p { color: #C7CEDE; margin: 12px auto 24px; max-width: 480px; font-size: 15px; }
+  .btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 14.5px;
+    padding: 13px 30px;
+    border-radius: 100px;
+    text-decoration: none;
+  }
+  .cta .contact-line {
+    margin-top: 20px;
+    font-size: 13.5px;
+    color: #9AA4BC;
+  }
+
+  footer {
+    padding: 30px 0 50px;
+    text-align: center;
+    font-size: 12.5px;
+    color: #A5A9B3;
+  }
+
+  @media (max-width: 640px) {
+    .hero { padding: 56px 0 40px; }
+    .hero h1 { font-size: 30px; }
+    .stat-row { flex-direction: column; }
+    .stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 16px; }
+    .compare { grid-template-columns: 1fr; }
+    .change-item { grid-template-columns: 30px 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Studiu de caz</span>
+    <h1>O reclamă a rulat 3 luni fără rezultate. <em>Am schimbat 3 lucruri — nu bugetul.</em></h1>
+    <p class="lede">Același produs, același buget, aceeași audiență. Singura variabilă schimbată a fost textul — și modul în care a fost construit, pornind de la research, nu de la presupuneri.</p>
+
+    <div class="stat-row">
+      <div class="stat">
+        <div class="num">0 → 6</div>
+        <div class="lbl">Comenzi în prima săptămână</div>
+      </div>
+      <div class="stat">
+        <div class="num">4.500 RON</div>
+        <div class="lbl">Buget de ads, neschimbat</div>
+      </div>
+      <div class="stat">
+        <div class="num">3 luni</div>
+        <div class="lbl">Cât rulase reclama veche, fără rezultat</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-label">Înainte / După</div>
+    <h2>Același produs. Alt text.</h2>
+    <p class="section-intro">Reclama veche fusese scrisă în interiorul companiei, într-o seară, între alte sarcini. Structura părea corectă — prezenta produsul, avea un CTA — dar nu pornea de la nimic verificat despre cititor.</p>
+
+    <div class="compare">
+      <div class="card before">
+        <div class="card-head">Reclama veche</div>
+        <div class="card-body">
+          <p>„Compania noastră oferă servicii complete, de la A la Z, cu profesionalism și seriozitate. Contactați-ne pentru o ofertă personalizată!"</p>
+        </div>
+        <div class="card-meta">Rezultat: <strong>0 comenzi</strong> în 3 luni de rulare</div>
+      </div>
+
+      <div class="card after">
+        <div class="card-head">Reclama nouă</div>
+        <div class="card-body">
+          <p>Pornește direct cu problema pe care o are cititorul, pusă în cuvintele exacte pe care le folosea el în comentariile vechi — nu în termenii „corecți" din industrie.</p>
+          <p>Prețul apare din prima propoziție. CTA-ul cere o singură acțiune, simplă.</p>
+        </div>
+        <div class="card-meta">Rezultat: <strong>6 comenzi</strong> în prima săptămână</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="section-label">Ce s-a schimbat, concret</div>
+    <h2>3 lucruri, nu 30</h2>
+    <p class="section-intro">Nu a fost nevoie de un text mai lung sau mai „creativ" — a fost nevoie de un text construit pe ce se știa deja despre cititor, nu pe ce se presupunea despre el.</p>
+
+    <div class="changes">
+      <div class="change-item">
+        <div class="change-num">1</div>
+        <div>
+          <h3>Hook-ul a pornit de la o întrebare reală a clienților</h3>
+          <p>Comentariile la reclamele vechi arătau că oamenii întrebau constant „cât costă" — semn că textul nu răspundea deja la asta. Noul text pune prețul vizibil, din prima propoziție.</p>
+        </div>
+      </div>
+      <div class="change-item">
+        <div class="change-num">2</div>
+        <div>
+          <h3>CTA-ul a fost mutat și simplificat</h3>
+          <p>Formularul de contact avea prea multe câmpuri — analiza arăta că majoritatea abandonau exact acolo. A fost redus la 2 câmpuri, în paralel cu textul nou.</p>
+        </div>
+      </div>
+      <div class="change-item">
+        <div class="change-num">3</div>
+        <div>
+          <h3>Diferențiatorul a fost înlocuit</h3>
+          <p>„Servicii complete, de la A la Z" e o formulare pe care o folosește toată industria. A fost înlocuită cu un detaliu specific, verificabil, pe care competiția nu-l menționa nicăieri.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta">
+      <h2>Vrei același proces pentru afacerea ta?</h2>
+      <p>Dacă ai o reclamă, o pagină de vânzare sau un email care nu convertesc cât ar trebui, primul pas e mereu research-ul — nu textul în sine.</p>
+      <a class="btn" href="mailto:office@gherasimmarius.com">Scrie-mi despre proiectul tău</a>
+      <div class="contact-line">office@gherasimmarius.com &nbsp;·&nbsp; +40 0759 012 119</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Marius Gherasim · Copywriting &amp; Digital Marketing · gherasimmarius.com
+</footer>
+
+</body>
+</html>
