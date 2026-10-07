@@ -198,7 +198,7 @@ nav a.active { border-bottom: 2px solid var(--gold); }
   border-radius: 5px;
 }
 .slot.filled { background: var(--navy); }
-.slot.empty { background: var(--border); }
+.slot.empty { background: var(--green); }
 .slots-label { text-align: center; }
 .slots-label strong { display: block; font-size: 1.1rem; color: var(--navy); }
 .slots-label span { font-size: 0.8rem; color: var(--text-light); }
