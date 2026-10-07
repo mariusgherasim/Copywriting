@@ -557,6 +557,97 @@ footer {
 
 .btn-full{width:100%;text-align:center;margin-top:auto;}
 
+/* ===== PACHET START ===== */
+.pachet-start-wrap { margin-bottom: 32px; }
+.pachet-start {
+  background: var(--navy);
+  color: #fff;
+  border-radius: 14px;
+  padding: 32px 36px;
+  border: 2px solid var(--gold);
+}
+.pachet-start-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+.pachet-start-header strong { font-size: 1.25rem; color: var(--gold); letter-spacing: 0.01em; }
+.badge-outline {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  border: 1.5px solid var(--gold);
+  color: var(--gold);
+  border-radius: 20px;
+  padding: 3px 10px;
+  text-transform: uppercase;
+}
+.pachet-price-dark {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 8px 0 4px;
+  line-height: 1;
+}
+.pachet-price-dark span { font-size: 1rem; font-weight: 400; color: rgba(255,255,255,0.65); margin-left: 4px; }
+.pachet-subtitle-dark { font-size: 0.9rem; color: rgba(255,255,255,0.72); margin-bottom: 20px; line-height: 1.5; }
+.pachet-start-body { display: flex; flex-direction: column; gap: 20px; }
+.pachet-start-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.pachet-start-list li { font-size: 0.92rem; color: rgba(255,255,255,0.9); line-height: 1.5; }
+.pachet-start-list li em { color: rgba(255,255,255,0.55); font-style: normal; font-size: 0.85rem; }
+.btn-outline-navy {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  background: transparent;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.2s, color 0.2s;
+  align-self: flex-start;
+}
+.btn-outline-navy:hover { background: var(--gold); color: var(--navy); }
+
+/* ===== SERVICII INDIVIDUALE ===== */
+.individual-subtitle { font-size: 0.88rem; color: var(--text-light); margin-bottom: 16px; }
+.price-detail { font-size: 0.82rem; color: var(--text-light); line-height: 1.4; }
+
+/* ===== ADS LIST ===== */
+.ads-list { list-style: none; padding: 0; margin: 12px 0; display: flex; flex-direction: column; gap: 10px; }
+.ads-list li { display: flex; flex-direction: column; gap: 2px; }
+.ads-channel { font-weight: 700; font-size: 0.92rem; color: var(--navy); }
+.ads-channel-detail { font-size: 0.82rem; color: var(--text-light); line-height: 1.4; }
+
+/* ===== MINI STATUS & PORTFOLIO ===== */
+.mini-status { display: flex; align-items: center; gap: 8px; margin-top: 18px; font-size: 0.88rem; color: var(--text-light); }
+.mini-status a { color: var(--navy); font-weight: 600; text-decoration: underline; }
+.portfolio-mini { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); }
+.portfolio-mini-label {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.portfolio-mini-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.portfolio-mini-links a {
+  font-size: 0.82rem;
+  color: var(--navy);
+  background: rgba(11,31,74,0.06);
+  border-radius: 5px;
+  padding: 4px 10px;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  transition: background 0.2s;
+}
+.portfolio-mini-links a:hover { background: rgba(11,31,74,0.12); }
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .comp-grid { grid-template-columns: repeat(2, 1fr); }
